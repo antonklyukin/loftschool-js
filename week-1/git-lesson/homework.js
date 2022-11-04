@@ -44,7 +44,6 @@
 
 // 1.6*
 //Rest operator - остаточные параметры
-//Доделать
 function sumArgs(...args) {
   let sum = 0;
   for (let arg of args) {
@@ -55,7 +54,7 @@ function sumArgs(...args) {
 
 function bindFunction(fn, ...args) {
   let myFunc = function () {
-    fn(...args);
+    return fn(...args);
   };
   return myFunc;
 }
